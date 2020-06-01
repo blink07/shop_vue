@@ -33,3 +33,6 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ### 配置
 assets/global.css为全局样式表
+
+
+### 对权限页面进行管控，使用路由导航守卫，参考router/index.js文件

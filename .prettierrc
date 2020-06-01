@@ -1,0 +1,7 @@
+// 让语法符合eslink规范
+{
+  "semi": false,
+  "singleQuote": true
+}
+
+//vscode快捷键（ctrl+alt+\）
