@@ -7,7 +7,7 @@
       </div>
       <!-- 表单区域 通过ref拿到表单实例对象-->
       <el-form ref="loginFormRef" :model="loginForm" :rules="loginFormRules" label-width="0" class="login_form">
-        <!-- 用户名 -->
+        <!-- 用户名 prop为验证规则的属性，即username对应验证规则的username -->
         <el-form-item prop="username">
           <el-input v-model="loginForm.username" prefix-icon="el-icon-user-solid"></el-input>
         </el-form-item>
@@ -34,7 +34,7 @@ export default {
       // 这是登录表单的数据绑定对象
       loginForm: {
         username: 'admin',
-        password: 'admin123'
+        password: '123456'
       },
       // 这是表单的验证规则对象
       loginFormRules: {

@@ -3,7 +3,25 @@ import VueRouter from 'vue-router'
 // import Home from '../views/Home.vue'
 import Login from '../components/Login'
 import Home from '../components/Home'
+import Welcome from '../components/Welcome'
+import User from '../components/user/users'
 Vue.use(VueRouter)
+
+// 在home页面点击耳机菜单显示右边主区域时会报导航错误：Navigating to current location ("/users") is not allowed
+// 原因：
+// 多次点击跳转同一个路由是不被允许的
+// 解决方案：重写规则：在你引了vue-router的js文件里加上如下代码即可（我的在index.js文件）
+// push
+const VueRouterPush = VueRouter.prototype.push
+VueRouter.prototype.push = function push (to) {
+  return VueRouterPush.call(this, to).catch(err => err)
+}
+
+// replace
+const VueRouterReplace = VueRouter.prototype.replace
+VueRouter.prototype.replace = function replace (to) {
+  return VueRouterReplace.call(this, to).catch(err => err)
+}
 
 const routes = [
   // {
@@ -31,7 +49,18 @@ const routes = [
   {
     path: '/home',
     name: 'home',
-    component: Home
+    component: Home,
+    redirect: '/welcome',
+    children: [
+      {
+        path: '/welcome',
+        component: Welcome
+      },
+      {
+        path: '/users',
+        component: User
+      }
+    ]
   }
 ]
 
