@@ -3,6 +3,7 @@ html,body,#app{
     height: 100%;
     margin: 0;
     padding: 0;
+    min-width: 1366px; /* 屏幕最小宽度 */
 }
 /* 设置面包屑与卡片的间隔 */
 .el-breadcrumb{

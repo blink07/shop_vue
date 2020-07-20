@@ -5,6 +5,8 @@ import Login from '../components/Login'
 import Home from '../components/Home'
 import Welcome from '../components/Welcome'
 import User from '../components/user/users'
+import Rights from '../components/power/Rights'
+import Roles from '../components/power/Roles'
 Vue.use(VueRouter)
 
 // 在home页面点击耳机菜单显示右边主区域时会报导航错误：Navigating to current location ("/users") is not allowed
@@ -59,6 +61,14 @@ const routes = [
       {
         path: '/users',
         component: User
+      },
+      {
+        path: '/rights',
+        component: Rights
+      },
+      {
+        path: '/roles',
+        component: Roles
       }
     ]
   }

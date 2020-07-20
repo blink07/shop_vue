@@ -24,7 +24,11 @@ import {
   Tooltip,
   Pagination,
   Dialog,
-  MessageBox // 这里和Message一样不需要vue注入，而是进行挂载
+  MessageBox, // 这里和Message一样不需要vue注入，而是进行挂载
+  Tag,
+  Tree,
+  Select,
+  Option
 } from 'element-ui' // Message为弹框提示组件
 // 在创建项目时配置的按需导入，所以这里需要将需要的对象导入进来
 // import {  } from 'element-ui'
@@ -52,6 +56,10 @@ Vue.use(Switch)
 Vue.use(Tooltip)
 Vue.use(Pagination)
 Vue.use(Dialog)
+Vue.use(Tag)
+Vue.use(Tree)
+Vue.use(Select)
+Vue.use(Option)
 // 将Message挂载到Vue原型对象上，进行全局调用
 Vue.prototype.$message = Message
 Vue.prototype.$confirm = MessageBox.confirm
