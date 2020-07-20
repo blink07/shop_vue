@@ -47,4 +47,12 @@ assets/global.css为全局样式表
 git branch
 2.如果正是当前开发的分支，提交到暂存分区
 git add .
+3.将所有代码提交该分支代码
+git commit -m '提交说明'
+4.提交代码到github
+git push   # 如果github还没有该分支，则是git push -o origin 分支名字
+
+5. 将代码合并到master分支
+5.1 切换到master分支
+git checkout master
 
