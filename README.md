@@ -55,4 +55,6 @@ git push   # 如果github还没有该分支，则是git push -o origin 分支名
 5. 将代码合并到master分支
 5.1 切换到master分支
 git checkout master
-
+5.2 合并分支到master
+git merge 分支名
+5.3将主分支master提交到github
